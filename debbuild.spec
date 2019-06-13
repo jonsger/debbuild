@@ -16,12 +16,14 @@ Group: devel
 %else
 Group: Development/Tools/Building
 %global dist ubuntu18.04
+%endif
 %define __msgfmt /usr/bin/msgfmt
 %define __pod2man /usr/bin/pod2man
-%endif
 License: GPLv2+
 Packager: Andreas Scherer <https://ascherer.github.io/>
 Release: ascherer.%{dist}
+
+BuildRequires: gettext
 
 Requires: dpkg-dev, perl, fakeroot
 Requires: liblocale-gettext-perl
